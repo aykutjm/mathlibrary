@@ -1,12 +1,11 @@
 {
   "name": "mathlibrary",
   "version": "1.0.0",
+  "description": "Simple math library API",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "dependencies": {
-    "mathjs": "^12.4.1",
-    "express": "^4.18.2"
-  }
+  "author": "Your Name",
+  "license": "ISC"
 }
