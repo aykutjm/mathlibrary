@@ -1,19 +1,20 @@
+# Node 18 resmi imajı
 FROM node:18
 
-# 1. Çalışma dizinini belirle
+# Çalışma dizini
 WORKDIR /app
 
-# 2. package.json ve lock dosyasını kopyala
+# package.json ve package-lock.json (varsa) kopyala
 COPY package*.json ./
 
-# 3. Bağımlılıkları yükle
+# Bağımlılıkları yükle
 RUN npm install
 
-# 4. Tüm kaynak kodunu kopyala
+# Uygulama dosyalarını kopyala
 COPY . .
 
-# 5. Uygulama portunu tanımla (örnek: 3000)
+# 3000 portunu aç
 EXPOSE 3000
 
-# 6. Uygulamayı başlat
-CMD ["node", "index.js"]
+# Uygulamayı başlat
+CMD ["npm", "start"]
